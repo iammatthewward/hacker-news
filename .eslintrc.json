@@ -23,5 +23,9 @@
         "shallow": true,
         "render": true,
         "mount": true
+    },
+    "plugins": ["import"],
+    "settings": {
+        "import/resolver": "webpack"
     }
 }

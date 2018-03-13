@@ -36,5 +36,10 @@ module.exports = {
             template: 'src/index.html'
         }),
         new ExtractTextPlugin('styles.css')
-    ]
+    ],
+    resolve: {
+        alias: {
+            ui: path.resolve(__dirname, 'src/ui')
+        }
+    }
 };
