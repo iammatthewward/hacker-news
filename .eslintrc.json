@@ -18,5 +18,10 @@
         "comma-dangle": ["error", "never"],
         "react/jsx-filename-extension": 0,
         "react/jsx-indent": ["error", 4]
+    },
+    "globals": {
+        "shallow": true,
+        "render": true,
+        "mount": true
     }
 }
