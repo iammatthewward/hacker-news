@@ -39,7 +39,7 @@ module.exports = {
     ],
     resolve: {
         alias: {
-            ui: path.resolve(__dirname, 'src/ui')
+            Ui: path.resolve(__dirname, 'src/ui')
         }
     }
 };
