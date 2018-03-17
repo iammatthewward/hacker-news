@@ -19,13 +19,13 @@
         "react-dom": "^16.2.0"
     },
     "devDependencies": {
-        "@babel/core": "^7.0.0-beta.40",
-        "@babel/preset-env": "^7.0.0-beta.40",
-        "@babel/preset-react": "^7.0.0-beta.40",
+        "@babel/core": "^7.0.0-beta.42",
+        "@babel/plugin-proposal-object-rest-spread": "^7.0.0-beta.42",
+        "@babel/preset-env": "^7.0.0-beta.42",
+        "@babel/preset-react": "^7.0.0-beta.42",
         "babel-core": "^7.0.0-0",
         "babel-jest": "^22.4.1",
         "babel-loader": "^8.0.0-beta",
-        "babel-plugin-transform-object-rest-spread": "^6.26.0",
         "css-loader": "^0.28.10",
         "enzyme": "^3.3.0",
         "enzyme-adapter-react-16": "^1.1.1",
