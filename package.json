@@ -49,7 +49,10 @@
             "./test-setup.js"
         ],
         "moduleNameMapper": {
-            "\\.css$": "identity-obj-proxy"
+            "\\.css$": "identity-obj-proxy",
+            "Components/([^\\.]*)$": "<rootDir>/src/components/$1",
+            "Helpers/([^\\.]*)$": "<rootDir>/src/helpers/$1",
+            "Ui/([^\\.]*)$": "<rootDir>/src/ui/$1"
         }
     }
 }
