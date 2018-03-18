@@ -50,9 +50,9 @@
         ],
         "moduleNameMapper": {
             "\\.css$": "identity-obj-proxy",
-            "Components/([^\\.]*)$": "<rootDir>/src/components/$1",
-            "Helpers/([^\\.]*)$": "<rootDir>/src/helpers/$1",
-            "Ui/([^\\.]*)$": "<rootDir>/src/ui/$1"
+            "Components/([^\\.]*)$": "<rootDir>/src/client/components/$1",
+            "Helpers/([^\\.]*)$": "<rootDir>/src/client/helpers/$1",
+            "Ui/([^\\.]*)$": "<rootDir>/src/client/ui/$1"
         }
     }
 }
