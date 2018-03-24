@@ -2,6 +2,7 @@ import React from 'react';
 import Card from 'Ui/card';
 import Heading from 'Ui/heading';
 import Content from 'Ui/content';
+import Link from 'Ui/link';
 
 import NewsItem from './index';
 
@@ -13,6 +14,7 @@ describe('NewsItem', () => {
         props = {
             heading: 'Repair cafés waging war on throwaway culture',
             hostname: 'theguardian.com',
+            url: 'https://www.theguardian.com/world/2018/mar/15/can-we-fix-it-the-repair-cafes-waging-war-on-throwaway-culture',
             points: 300,
             author: 'wcunning',
             hours: 3,
@@ -32,16 +34,18 @@ describe('NewsItem', () => {
 
     describe('heading section', () => {
         let heading;
+        let headingLink;
 
         beforeEach(() => {
             heading = wrapper.find(Heading);
+            headingLink = heading.find(Link);
         });
 
-        it('should render the given heading prop', () => {
+        it('should render the given heading prop inside a Link', () => {
             // arrange
             const expected = props.heading;
             // act
-            const actual = heading.props().children;
+            const actual = headingLink.props().children;
             // assert
             expect(actual).toContain(expected);
         });
@@ -50,7 +54,16 @@ describe('NewsItem', () => {
             // arrange
             const expected = props.hostname;
             // act
-            const actual = heading.find(Content).props().children;
+            const actual = wrapper.find(Content).at(0).props().children;
+            // assert
+            expect(actual).toContain(expected);
+        });
+
+        it('should pass the given url as a href to the heading link', () => {
+            // arrange
+            const expected = props.url;
+            // act
+            const actual = headingLink.props().href;
             // assert
             expect(actual).toContain(expected);
         });
